@@ -12,29 +12,7 @@ This Python script helps to backup and import MySQL database to AWS RDS using AW
 
 5. Removes the local backup file.
 
-Requirements:
-
-* AWS CLI installed and configured with appropriate credentials.
-
-* Python 3.x
-
-* Boto3 library installed
-
-Backup and Import MySQL Database to AWS RDS using AWS CLI
-
-This Python script helps to backup and import MySQL database to AWS RDS using AWS CLI. The script performs the following steps:
-
-1. Accepts input parameters for MySQL database host, user, password, database name, AWS region, profile, RDS instance identifier, RDS instance class, RDS database name, S3 bucket name, S3 prefix, and IAM role to use while uploading to S3.
-
-2. Creates an AWS STS client and gets details of the current IAM role.
-
-3. Uses the mysqldump command to create a local backup of the MySQL database.
-
-4. Configures AWS RDS and restores the database from the S3 bucket.
-
-5. Removes the local backup file.
-
-Requirements:
+# Requirements
 
 * AWS CLI installed and configured with appropriate credentials.
 
@@ -64,10 +42,18 @@ python3 sql_migration_cloud.py \
 
 Replace the input parameters with the appropriate values.
 
-**Note**
+# Note
 
 * The script requires appropriate permissions to backup and import the database. Ensure that the IAM role used by the script has the necessary permissions.
 
 * The script deletes the local backup file after importing the database to AWS RDS. Ensure that you have a backup of the database before running the script.
 
 * This script does not support SSL connections to the MySQL database.
+
+# References
+
+* [boto3 docs](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+
+* [AWS CLI docs](https://aws.amazon.com/cli/)
+
+* [AWS RDS docs](https://aws.amazon.com/rds/)
