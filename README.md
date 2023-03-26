@@ -1,4 +1,4 @@
-# psql-cloud-migration
+# SQL cloud migration
 
 This Python script helps to backup and import MySQL database to AWS RDS using AWS CLI. The script performs the following steps:
 
