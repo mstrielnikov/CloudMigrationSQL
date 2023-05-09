@@ -24,19 +24,17 @@ This Python script helps to backup and import MySQL database to AWS RDS using AW
 
 To use the script, run the following command:
 ```bash
-python3 sql_migration_cloud.py \
+python3 cloud_migration_sql.go \
   --mysql-host $MySQL_database_host \
   --mysql-user $MySQL_database_user \
   --mysql-password $MySQL_database_password \
   --mysql-db $MySQL_database_name \
-  --aws-region $AWS_region \
   --aws-profile $AWS_CLI_profile \
-  --aws-db-instance $AWS_RDS_instance_identifier \
-  --aws-db-instance-class $AWS_RDS_instance_class \
+  --aws-db-engine $AWS_RDS_instance_identifier \
+  --aws-db-engine-v $AWS_RDS_instance_class \
   --aws-db-name $AWS_RDS_database_name \
   --s3-bucket-name $AWS_S3_bucket_name \
   --s3-prefix $AWS_S3_prefix \
-  --s3-iam-role $AWS_role_to_use_while_upload_to_S3 \
   --backup-filename $Local_backup_filename
 ```
 
@@ -52,8 +50,9 @@ Replace the input parameters with the appropriate values.
 
 # References
 
-* [boto3 docs](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
-
-* [AWS CLI docs](https://aws.amazon.com/cli/)
-
 * [AWS RDS docs](https://aws.amazon.com/rds/)
+* [Github: AWS SDK Go v2](https://github.com/aws/aws-sdk-go-v2#resources)
+* [AWS SDK Go v2: STS](https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/sts)
+* [AWS SDK Go v2: KMS](https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/kms)
+* [AWS SDK Go v2: S3](https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/s3)
+* [AWS SDK Go v2: RDS](https://pkg.go.dev/github.com/aws/aws-sdk-go-v2/service/rds)
