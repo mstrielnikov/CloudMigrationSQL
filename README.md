@@ -14,9 +14,9 @@ This Go script helps to backup and import MySQL database to AWS RDS using AWS CL
 
 # Requirements
 
-* AWS CLI installed and configured with appropriate credentials.
+* mysqldump utility installed.
 
-* Boto3 library installed
+* Go lang installed with version =< go1.17
 
 **Usage**
 
